@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp">
+
+    <!-- Circle Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/cn1"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Họ và tên -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Phan Trường Đô"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tvWork"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sinh viên Ngành ATTT - ĐHSPKT"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Mã số sinh viên -->
+    <TextView
+        android:id="@+id/tvID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Student ID: 23162020"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvWork"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- EditText nhập mảng số (vd: 1,2,3,4,5) -->
+    <EditText
+        android:id="@+id/etArrayInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mảng số (ví dụ: 1,2,3,4)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"/>
+
+    <!-- Button xử lý mảng -->
+    <Button
+        android:id="@+id/btnProcessArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xử lý mảng (Log chẵn/lẻ)"
+        app:layout_constraintTop_toBottomOf="@id/etArrayInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <!-- TextView hiển thị kết quả chẵn -->
+    <TextView
+        android:id="@+id/tvEven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Số chẵn: "
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnProcessArray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- TextView hiển thị kết quả lẻ -->
+    <TextView
+        android:id="@+id/tvOdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Số lẻ: "
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"/>
+
+    <!-- EditText nhập chuỗi để đảo -->
+    <EditText
+        android:id="@+id/etStringInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập chuỗi (ví dụ: I LOVE YOU)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvOdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Button đảo chuỗi -->
+    <Button
+        android:id="@+id/btnReverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đảo và in hoa (Toast + TextView)"
+        app:layout_constraintTop_toBottomOf="@id/etStringInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- TextView hiển thị chuỗi đảo -->
+    <TextView
+        android:id="@+id/tvReversed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kết quả đảo: "
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnReverse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
